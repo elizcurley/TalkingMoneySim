@@ -1,38 +1,25 @@
-# The Case Lab — student quick start
+# The Case Lab — Quick Start (Beta 1.2)
 
-**Purpose:** Practice describing your work persuasively without overstating what you know or can deliver.
+This site lets you practice **making a convincing, truthful case** for an experience, idea, program, or ethical decision. It's a rehearsal tool, not a test. **No score.**
 
-Choose from four studios:
+## Choose what to practice
 
-- **Impact Language:** Take a small, mundane accomplishment and turn it into language that communicates its real value. Start with your own version.
-- **Pitch Room:** Practice a live conversation with a skeptical donor, hiring manager, board member, or community partner. That person may say no or raise reasonable concerns.
-- **Proposal Workshop:** Practice writing parts of a grant proposal, such as the need, theory of change, activities, outcomes, measures, budget, and implementation plan.
-- **Ethics & Power:** Work through funding, self-promotion, community voice, and professional ethics dilemmas without assuming that everything has one neat answer.
+- **Jargon Gym (recommended first):** Turn an ordinary phrase into professional language and then humorous corporate jargon. One sentence at a time; `NEXT` gives another.
+- **Impact Language:** Make routine work sound valuable without exaggerating what it accomplished.
+- **The Pitch Room:** Give a spoken or typed pitch to a fictional donor, manager, or decision-maker, then respond to questions.
+- **Proposal Workshop:** Develop a persuasive plan with activities, measurable deliverables, and realistic resources.
+- **Ethics & Power:** Talk through hard decisions about funding, personal advocacy, organizational values, and professional responsibility.
 
-## The steps
+## Begin in five steps
 
-1. Pick a **studio**, **skill emphasis**, **challenge level**, and **fictional situation**.
-2. Leave **Gemini + Portable** if you're using university Google access; select **Copilot + Short** for the university Microsoft option. Claude/ChatGPT are optional if you have access. The site does not automatically run the chat.
-3. Choose **Immersive** if you want to practice without interruptions. Otherwise select coaching by request or guided notes.
-4. Click **Generate practice prompt** and **Copy prompt**, then paste the complete prompt into a new AI chat.
-5. Write or speak your own first attempt. Don't ask the AI to do the whole assignment for you: the point is to practice.
-6. Type **END PRACTICE** when done. The AI will provide qualitative feedback, not a numerical grade.
+1. Click one of the five activity cards. Read **How this works** before starting.
+2. Use a **fictional situation** or enter an example from your own life/work without any confidential details.
+3. Choose **Gemini, Copilot, Claude, or ChatGPT**. The site selects the recommended prompt length for you. For a pitch or jargon drill, choose whether to speak or type.
+4. Click **Generate my exercise**, then **Copy prompt**. Paste the entire prompt into a **new AI conversation**.
+5. Take your turn! End with `END PRACTICE` for feedback. For rapid jargon practice, `NEXT` starts another example.
 
-**Optional commands:** `CHECK PROGRESS` provides a process check; when coaching by request is enabled, `COACH PAUSE` gives a tip and `RESUME PRACTICE` returns to the task.
+**Want more control?** Open **Customize my practice (optional)** to change difficulty, specific skill, feedback depth, and other settings. You do not need to change these to begin.
 
-## A helpful rule
+**Using voice:** Paste and send the prompt first, then enable voice inside your chosen AI app if that feature is available. The website itself does not provide voice or collect recordings.
 
-An action you took is not necessarily an outcome you caused. You can write powerfully about initiative, coordination, service delivery and learning **without inventing changes you did not measure**. Also remember to credit colleagues and community members.
-
-Don't use identifiable client material, nonpublic records, or confidential organizational information in external AI systems. The site's fictional cases are designed so you don't need any real private data.
-
-
-## New: Jargon Gym (fast, low-stakes practice)
-
-Pick **Jargon Gym** and **Everyday → corporate** or **Rapid-fire jargon reps**. The AI offers an ordinary situation such as “I cut off a toxic friend.” Try to translate it into professional-sounding language. The AI should show a usable version and a funny over-the-top corporate version; the funny version is intentionally *not* a resume recommendation. Type or say **NEXT** for another example. Use **Decode the buzzwords** to practice translating corporate language back into ordinary speech.
-
-## New: spoken pitches
-
-Choose **Pitch Room → Spoken · live voice conversation**, then choose a short opening, elevator pitch, longer pitch, or Q&A. Copy the full prompt into your AI, send it, and enable that application's voice conversation feature (if it is available on your account and device). Speak your pitch; the AI plays the listener and asks realistic questions. It should not interrupt to grade you. If the voice feature starts a different chat, the site also supplies a short spoken kickoff as a fallback.
-
-Gemini Live is primarily a mobile-app experience; Copilot Voice depends on your account/license; Claude and ChatGPT support voice in eligible clients. The site does not provide a microphone or direct audio connection. Say **end practice** for a debrief.
+**Good practice:** Strong language explains what's valuable **without making up results**. Activities, outputs, outcomes, and impact are different claims. Don't share identifying client information or confidential workplace information.

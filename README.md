@@ -1,100 +1,54 @@
-# The Case Lab — Beta 1.1
+# The Case Lab — Beta 1.2
 
 **Make your case. Keep your integrity.**
 
-A completely static, GitHub Pages-ready training site for human-service students, nonprofit staff, and emerging professionals who need to translate routine accomplishments into credible value, pitch themselves and their work, develop fundable grant proposals, and handle ethical tension in fundraising and professional self-advocacy.
+A static, browser-only prompt generator for practicing corporate code-switching, accurate impact language, persuasive conversations, feasible nonprofit grant proposals, and ethical decision-making. There is **no scoring engine, backend, tracking, login, or API key** in the generator. Students paste a generated prompt into a new conversation with an AI provider of their choice. That provider's own data and voice policies apply.
 
-The website generates **copy-and-paste prompts** for university Microsoft Copilot, Google Gemini, Claude, and ChatGPT. It does **not** call an API, store transcripts, assign numerical scores, or require a login. The *external AI platform* processes prompts after users paste them there.
+## What's new in 1.2
 
-## Five studios
+The interface now starts with five understandable activities, not a settings matrix. A student chooses an activity card and reads a short "What you'll do" explanation. The only main choices are:
 
-| Studio | What learners practice | How the AI behaves |
-|---|---|---|
-| Jargon Gym | Quick, playful translation of everyday experiences into useful professional language and deliberately exaggerated corporate jargon; reverse translation and buzzword detection | A coach who asks for the learner’s attempt first, then supplies a grounded edit and clearly labeled humorous parody |
-| Impact Language | Translating mundane work and invisible labor into credible, audience-specific professional language | A candid editor who requires the learner to draft first, then offers specific critique |
-| The Pitch Room | Asking for support, making a donor or hiring pitch, responding to objections, and negotiating feasibility | A person with their own interests who may push back or decline |
-| Proposal Workshop | Needs statements, logic models, outputs/outcomes, plans, evaluation, budgets, capacity and sustainability | An iterative reviewer who asks for the learner's first attempt rather than ghostwriting an entire proposal |
-| Ethics & Power | Professional discomfort, donor influence, community voice, dignity, accurate credit, unfair burdens, and conflict with mission | A credible stakeholder who tests reasoning without imposing a single predetermined answer |
+1. **Starting material:** a fictional scenario or the student's own non-confidential example.
+2. **AI provider:** Gemini, Copilot, Claude, or ChatGPT. Selecting one sets a recommended prompt length automatically.
+3. **Speak or type:** shown only for the two activities where it helps, Jargon Gym and Pitch Room.
 
-The case bank contains **72 fictional scenarios** (48 original studio situations plus 24 Jargon Gym examples). Practice emphases are selected *within* the chosen studio. Students can also bring **their own non-confidential facts**; the browser does not upload, retain, or verify these facts.
+The previous detailed selectors (skill emphasis, complexity, scenario, prompt detail, pitch length, jargon drill pace, coaching, debrief, and ethical emphasis) are preserved under the collapsed **Customize my practice (optional)** panel. **Jargon Gym is the default starting activity** and the core case bank has not been reduced.
 
-## Settings
+## Five activities
 
-- **Practice studio:** choose between five studios, including new **Jargon Gym** (the default for easy practice).
-- **Practice emphasis:** specific communication or grant-writing skill.
-- **Challenge:** moderate, challenging, or advanced. Changes scrutiny and ambiguity, not the counterpart's hostility.
-- **Fictional situation:** pick a case or get a different one randomly. Random generation avoids repeating previously seen cases within the open page until that mode's bank is exhausted.
-- **Starting material:** a fictional scenario or your own non-confidential facts.
-- **Delivery (Pitch Room or Jargon Gym):** text or spoken voice practice; Pitch Room defaults to spoken. Spoken mode generates voice-friendly instructions and platform-specific handoff guidance.
-- **Pitch format:** short opener (~30 seconds), elevator (~60 seconds), longer (~2 minutes), or an untimed Q&A. These are goals, not measured time.
-- **Jargon practice pace:** one-line rapid-fire drills (say/type `NEXT` for another), or a slower workshop to compare registers.
-- **AI platform and prompt length:** defaults to a shorter prompt for Copilot, portable for Gemini, expanded for Claude and ChatGPT. Length can be overridden. These are compatibility-oriented design choices, not guarantees of platform behavior or official character limits.
-- **Support:** immersive roleplay, coaching by request (`COACH PAUSE` / `RESUME PRACTICE`), or occasional clearly labeled guidance.
-- **Debrief:** balanced, direct critique, or brief recap; **never a score**.
-- **Ethical lens:** integrated, or foreground ethical tradeoffs.
+- **Jargon Gym:** One everyday line at a time, the learner tries a professional rewrite and an intentionally ridiculous corporate version. In short reps, say `NEXT` to get another.
+- **Impact Language:** Convert actual routine work and invisible labor into persuasive, evidence-proportionate descriptions without invented outcomes or stolen credit.
+- **Pitch Room:** Pitch aloud or in text to a simulated decision-maker who can ask questions, have their own interests, and remain unconvinced.
+- **Proposal Workshop:** Develop fundable plans with plausible resources, activities, deliverables, evaluation, and capacity constraints.
+- **Ethics & Power:** Discuss ethical tensions involving money, mission, influence, labor, donor preferences, and professional representation.
 
-## Start and end
+## Quick start
 
-1. Open `index.html` or the GitHub Pages site.
-2. Select a studio and options, then **Generate practice prompt**. For a first low-stakes exercise, try Jargon Gym with the default quick drill.
-3. Click **Copy prompt** and paste the complete text into a *new conversation* with the chosen AI.
-4. In Pitch Room with Spoken selected, activate your chosen AI platform’s **voice conversation** inside the prepared chat, if available. The site itself does not record or transmit audio. If the AI opens a fresh voice chat, try the separate **spoken kickoff** or return to the full prompt in text. Then speak or write as the learner. The AI should not generate a polished answer before you attempt the exercise (other than its roleplayed opening or brief).
-5. Type or say **`END PRACTICE`** to stop and receive qualitative feedback. **`CHECK PROGRESS`** requests a brief non-scored process check while continuing.
-6. If support was set to coaching by request, type **`COACH PAUSE`** and **`RESUME PRACTICE`**.
+1. Click an activity card. The builder below explains what will happen.
+2. Keep "Surprise me with a fictional situation" or choose your own *non-confidential* example.
+3. Choose the AI provider. For pitches or jargon drills, choose spoken or typed practice.
+4. Click **Generate my exercise** and **Copy prompt**.
+5. Paste the **complete** prompt into a new conversation in the selected AI provider. If practicing aloud, enable that provider's voice feature after sending the prompt, where available.
+6. Type or say `END PRACTICE` for qualitative feedback. There are no points or grades.
 
-## Deploy to GitHub Pages
+### Optional controls
 
-1. Create a **new public repository** (recommended; this does not replace your existing simulation sites).
-2. Extract the *GitHub Pages ZIP* and upload its contents to the repository root: `index.html`, `style.css`, `cases.js`, `app.js`, and `README.md`.
-3. In repository Settings → Pages, choose **Deploy from a branch**, select `main` and `/(root)`, then save.
-4. Visit `https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/` once GitHub Pages is deployed.
-5. To revise cases, edit `cases.js`. To revise prompting or settings, edit `app.js`. Layout and visual styles live in `index.html` and `style.css`.
+Expand **Customize my practice** to specify a particular skill, raise complexity, select a known scenario, choose a prompt length, change the amount of AI coaching, or alter the feedback style. For the least intimidating first practice, leave this panel closed.
 
-**Site privacy:** generation and scenario selection are local to the browser. This website makes no data-collection requests and does not save user content. Copying facts to an external AI platform is a separate decision subject to that platform's privacy terms. Do not paste identifying client data, confidential student information, private donor records, or employer-only information into an AI tool without authorization.
+## Voice compatibility
 
-## Nonnegotiable instructional distinctions
+The generator is text-only and does not transmit or record audio. Voice availability and whether a platform carries pasted context into a voice session can vary by account and device. Pitch Room defaults to speaking, and a shorter spoken kickoff is available if the full prompt is not carried into voice. The kickoff alone cannot preserve every case fact: where possible, use the complete prompt in a continuous chat.
 
-- **Activity:** what staff or participants did.
-- **Output:** what the program delivered or counted.
-- **Outcome:** what changed for a defined person/group, as supported by evidence.
-- **Impact:** a larger and often longer-term effect, usually harder to attribute and demonstrate.
+## Boundaries
 
-Positive language should match the strength of the evidence. A participant count is not a retention rate, a referral is not successful service access, and an aspiration is not an achieved outcome. Do not claim all work as one's own, invent numbers, use clients as marketing props, or promise impossible capacity.
+- Facts stay facts; predictions are not outcomes.
+- Ethical concerns are explored, not automatically resolved.
+- Learners must attempt writing/pitching before the AI offers its polished solution.
+- The AI is a rehearsal partner, not a verified ethics ruling, fidelity assessment, grant reviewer, or source of confidential storage.
+- Never enter client identifiers or confidential agency material in the generator or an AI chat.
 
-## Ethics and source links
+## GitHub Pages deployment
 
-The lab uses broad professional themes from the **NASW Code of Ethics**. The following references may be useful starting points for discussion, not automatic findings of an ethical violation:
+Upload `index.html`, `style.css`, `cases.js`, and `app.js` to the **root** of a new or existing GitHub Pages repository. Enable Pages from the default branch/root in repository settings. You may upload the text guides alongside them. No build step, packages, secrets, or external JavaScript libraries are needed.
 
-- [Official NASW Code of Ethics](https://www.socialworkers.org/about/ethics/code-of-ethics)
-- [Privacy and confidentiality (1.07)](https://www.socialworkers.org/About/Ethics/Code-of-Ethics/Code-of-Ethics-English/Social-Workers-Ethical-Responsibilities-to-Clients)
-- [Administration and equitable resource allocation (3.07)](https://www.socialworkers.org/About/Ethics/Code-of-Ethics/Code-of-Ethics-English/Social-Workers-Ethical-Responsibilities-in-Practice-Settings)
-- [Misrepresentation (4.06) and acknowledging credit (4.08)](https://www.socialworkers.org/About/Ethics/Code-of-Ethics/Code-of-Ethics-English/Social-Workers-Ethical-Responsibilities-as-Professionals)
-
-Students should consult the current Code directly when referencing a particular standard. Ethics discussions should consider power, competing obligations and implementation context rather than using the Code as a simplistic answer key. The tool is educational and not a legal, financial, fundraising, or professional ethics determination.
-
-## Tested for Beta 1
-
-- 48 scenario anchors available, 12 per studio.
-- 625 structured application-logic combinations checked, including all case anchors and custom source facts.
-- 144 real-browser interaction combinations across four modes, four platforms, three difficulty levels, and three coaching states.
-- No browser runtime errors or horizontal overflow at the tested 390px mobile width.
-- In the tested fictional cases, the short prompt stayed under 3,100 characters and the portable prompt under 5,200 characters. User-written facts can increase length; the interface warns when its suggested length is exceeded, without silently deleting their source facts.
-
-**Limit:** Model behavior across full-length conversations in every external AI product has **not** been validated. Early beta testing should compare whether the AI preserves facts, maintains skepticism without cruelty, makes the student do the work, and gives fair rather than flattering feedback.
-
-## Voice practice: realistic compatibility notes
-
-The website is a static **prompt generator**, not a voice-chat platform. Voice conversations happen inside the chosen AI application, subject to its subscription, admin, device, and regional settings. The preferred workflow is: **paste full prompt → send → activate voice in the same conversation → speak your pitch → debrief**.
-
-- **Gemini:** Gemini Live is available in the eligible mobile app, not the standard web chat. Create/open the same Gemini chat in the mobile app and switch to Live if permitted.
-- **Copilot:** Microsoft offers Copilot Voice for eligible personal and workplace/school accounts; availability and context handoff vary. Voice may use a different system than text. The site supplies a separate concise kickoff if the voice UI starts a different conversation.
-- **Claude:** supports text/voice switching in the same conversation on supported web, desktop, and mobile clients.
-- **ChatGPT:** supports Voice within an existing chat when enabled for the account and device.
-
-The **voice kickoff is a fallback**, not a substitute for the full case packet. Models should not claim they measured vocal timing, pauses, volume, affect, eye contact, or nonverbal presence when they only have text/transcription. In voice mode the AI should use short, human-sounding replies, realistic objections, and one follow-up question at a time; it should not jump into feedback during a pitch.
-
-## Jargon Gym: learn the dialect without losing the truth
-
-The rapid drills give learners one everyday statement at a time. They attempt a professional rewrite; the AI helps distinguish **plain language**, **workplace-usable professional language**, and **deliberately ridiculous corporate jargon**. The comic version is explicitly a *parody*, not a recommended resume line.
-
-Example: *“I cut off a toxic friend.”* → credible: *“Established and maintained boundaries in a difficult personal relationship.”* → comic: *“Implemented a values-aligned stakeholder disengagement strategy.”* These are ways of reframing the user's account, not proof of diagnoses, outcomes, or formally held responsibilities. Learners can also decode jargon back into plain English, compare audiences, and flag unsupported claims.
+For faculty: see `FACULTY_GUIDE.md`; for brief student instructions: see `STUDENT_QUICK_START.md`.

@@ -2,6 +2,22 @@
 const {cases:CASES,focus:FOCUS}=window.CASE_LAB_DATA;
 const $=id=>document.getElementById(id);
 const MODE_LABELS={jargon:'Jargon Gym',translate:'Impact Language Studio',pitch:'The Pitch Room',proposal:'Proposal Workshop',ethics:'Ethics & Power Lab'};
+const ACTIVITY_GUIDES={
+  jargon:{title:'Jargon Gym',description:'Turn an ordinary sentence into honest professional language—and a wildly corporate parody for fun.',steps:'The AI gives you one plain sentence. You try rewriting it. It gives quick feedback and two example registers. Type NEXT for another.',time:'Suggested practice: 5–10 minutes · No score'},
+  translate:{title:'Impact Language',description:'Explain why routine tasks and invisible labor matter without inventing outcomes, influence, or numbers.',steps:'You write a first attempt. The AI asks what evidence supports it and helps you strengthen the language.',time:'Suggested practice: 10–15 minutes · No score'},
+  pitch:{title:'The Pitch Room',description:'Make your case aloud or in writing to a fictional decision-maker who has real questions and priorities.',steps:'Introduce your idea, give a pitch, and respond to one realistic question at a time. The AI may remain unconvinced.',time:'Suggested practice: 10–15 minutes · No score'},
+  proposal:{title:'Proposal Workshop',description:'Turn a promising idea into a specific and persuasive plan that people could realistically deliver.',steps:'Start with a short draft or answer questions. Then work through what can be done, measured, staffed, and funded.',time:'Suggested practice: 15–20 minutes · No score'},
+  ethics:{title:'Ethics & Power',description:'Explore difficult tradeoffs between mission, money, self-advocacy, power, and honesty.',steps:'You face a realistic dilemma, explain your reasoning, and consider alternatives. The AI challenges assumptions without handing you an answer.',time:'Suggested practice: 10–15 minutes · No score'}
+};
+function updateStudioIntro(){
+  const mode=$('mode').value, info=ACTIVITY_GUIDES[mode];
+  $('activityName').textContent=info.title;
+  $('activityDescription').textContent=info.description;
+  $('activitySteps').textContent=info.steps;
+  $('activityTime').textContent=info.time;
+  document.querySelectorAll('[data-studio]').forEach(card=>card.classList.toggle('selected',card.dataset.studio===mode));
+  document.querySelectorAll('[data-pick]').forEach(btn=>btn.setAttribute('aria-pressed',String(btn.dataset.pick===mode)));
+}
 const MODE_ROLE={jargon:'practical, playful business-language coach',translate:'experienced impact-language editor',pitch:'realistic prospective supporter or decision-maker',proposal:'thoughtful grant reviewer and proposal-development partner',ethics:'thoughtful colleague or decision-maker navigating a real ethical tension'};
 const ETHICS_URL='https://www.socialworkers.org/about/ethics/code-of-ethics';
 const STYLE=[
@@ -23,11 +39,10 @@ function rebuildFocus(){const mode=$('mode').value, old=$('focus').value;const e
 function focusHelp(){$('focus-help').textContent=FOCUS[$('mode').value][Number($('focus').value)]?.[1]||'';}
 function rebuildCaseChoices(){const mode=$('mode').value,el=$('caseChoice');el.replaceChildren();const any=document.createElement('option');any.value='random';any.textContent='Surprise me';el.appendChild(any);CASES[mode].forEach((c,i)=>{const opt=document.createElement('option');opt.value=String(i);opt.textContent=c.title;el.appendChild(opt);});el.value='random';}
 function onModeChange(){
-  rebuildFocus();rebuildCaseChoices();
+  rebuildFocus();$('focus').value='0';focusHelp();rebuildCaseChoices();
   const m=$('mode').value;
-  if(m==='pitch')$('delivery').value='voice';
-  else if(m==='jargon')$('delivery').value='text';
-  updateDeliveryVisibility();invalidate();
+  $('delivery').value=m==='pitch'?'voice':'text';
+  updateDeliveryVisibility();updateStudioIntro();invalidate();
 }
 function updateDeliveryVisibility(){
   const m=$('mode').value;
@@ -103,4 +118,4 @@ $('platform').addEventListener('change',()=>{$('format').value=$('platform').val
 for(const key of ['level','support','feedback','ethics','format'])$(key).addEventListener('change',invalidate);
 $('generate').addEventListener('click',generate);$('copy').addEventListener('click',copyPrompt);$('download').addEventListener('click',download);
 for(const btn of document.querySelectorAll('[data-pick]'))btn.addEventListener('click',()=>{$('mode').value=btn.dataset.pick;onModeChange();$('builder').scrollIntoView({behavior:'smooth'});});
-rebuildFocus();rebuildCaseChoices();updateDeliveryVisibility();sourceToggle();
+rebuildFocus();rebuildCaseChoices();updateDeliveryVisibility();updateStudioIntro();sourceToggle();
